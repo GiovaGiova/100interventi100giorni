@@ -99,10 +99,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -113,7 +113,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -151,10 +151,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -165,7 +165,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -203,10 +203,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -217,7 +217,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -255,10 +255,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -269,7 +269,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -307,10 +307,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -321,7 +321,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -359,10 +359,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -373,7 +373,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -411,10 +411,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -425,7 +425,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -463,10 +463,10 @@
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
+                        layer;
                     } else {
                         layer.eachLayer(function(feature){
-                            feature.closePopup()
+                            feature
                         });
                     }
                 },
@@ -477,7 +477,7 @@
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);

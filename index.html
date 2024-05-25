@@ -43,11 +43,6 @@
         <script src="data/quartieri_simplified_tretto_7.js"></script>
         <script src="data/schio_centroids_8.js"></script>
         <script>
-        var highlightLayer;
-        function highlightFeature(e) {
-            highlightLayer = e.target;
-            highlightLayer.openPopup();
-        }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         })
@@ -96,24 +91,15 @@
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
         function pop_quartieri_simplified_centro_1(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -148,24 +134,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_centro_1);
         map.addLayer(layer_quartieri_simplified_centro_1);
         function pop_quartieri_simplified_giavenale_2(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -200,24 +174,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_giavenale_2);
         map.addLayer(layer_quartieri_simplified_giavenale_2);
         function pop_quartieri_simplified_magre_3(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -252,24 +214,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_magre_3);
         map.addLayer(layer_quartieri_simplified_magre_3);
         function pop_quartieri_simplified_scroce_4(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -304,24 +254,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_scroce_4);
         map.addLayer(layer_quartieri_simplified_scroce_4);
         function pop_quartieri_simplified_sstrinita_5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -356,24 +294,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_sstrinita_5);
         map.addLayer(layer_quartieri_simplified_sstrinita_5);
         function pop_quartieri_simplified_stpoleo_6(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -408,24 +334,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_stpoleo_6);
         map.addLayer(layer_quartieri_simplified_stpoleo_6);
         function pop_quartieri_simplified_tretto_7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
@@ -460,24 +374,12 @@
         bounds_group.addLayer(layer_quartieri_simplified_tretto_7);
         map.addLayer(layer_quartieri_simplified_tretto_7);
         function pop_schio_centroids_8(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer;
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 20000, autoPan: false});
+            layer.bindPopup(popupContent, {minWidth: 500, autoPan: false});
             var popup = layer.getPopup();
             var content = popup.getContent();
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);

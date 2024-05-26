@@ -255,9 +255,6 @@
         function pop_quartieri_simplified_stpoleo_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>fid</strong><br />' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';

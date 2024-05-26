@@ -33,14 +33,14 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/schio_cerchio_1.js"></script>
-        <script src="data/quartieri_simplified_centro_2.js"></script>
-        <script src="data/quartieri_simplified_scroce_3.js"></script>
-        <script src="data/quartieri_simplified_giavenale_4.js"></script>
-        <script src="data/quartieri_simplified_stpoleo_5.js"></script>
-        <script src="data/quartieri_simplified_magre_6.js"></script>
-        <script src="data/quartieri_simplified_sstrinita_7.js"></script>
-        <script src="data/quartieri_simplified_tretto_8.js"></script>
+        <script src="data/schio_cerchio_2.js"></script>
+        <script src="data/quartieri_simplified_centro_3.js"></script>
+        <script src="data/quartieri_simplified_scroce_4.js"></script>
+        <script src="data/quartieri_simplified_giavenale_5.js"></script>
+        <script src="data/quartieri_simplified_stpoleo_6.js"></script>
+        <script src="data/quartieri_simplified_magre_7.js"></script>
+        <script src="data/quartieri_simplified_sstrinita_8.js"></script>
+        <script src="data/quartieri_simplified_tretto_9.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
@@ -89,7 +89,16 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_schio_cerchio_1(feature, layer) {
+        map.createPane('pane_georeferenced_compressed_output_1');
+        map.getPane('pane_georeferenced_compressed_output_1').style.zIndex = 401;
+        var img_georeferenced_compressed_output_1 = 'data/georeferenced_compressed_output_1.png';
+        var img_bounds_georeferenced_compressed_output_1 = [[45.69353207311416,11.2754354337288],[45.7120431353794,11.301842601354279]];
+        var layer_georeferenced_compressed_output_1 = new L.imageOverlay(img_georeferenced_compressed_output_1,
+                                              img_bounds_georeferenced_compressed_output_1,
+                                              {pane: 'pane_georeferenced_compressed_output_1'});
+        bounds_group.addLayer(layer_georeferenced_compressed_output_1);
+        map.addLayer(layer_georeferenced_compressed_output_1);
+        function pop_schio_cerchio_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -102,9 +111,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_schio_cerchio_1_0() {
+        function style_schio_cerchio_2_0() {
             return {
-                pane: 'pane_schio_cerchio_1',
+                pane: 'pane_schio_cerchio_2',
                 opacity: 1,
                 color: 'rgba(2,48,32,1.0)',
                 dashArray: '',
@@ -115,25 +124,22 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_schio_cerchio_1');
-        map.getPane('pane_schio_cerchio_1').style.zIndex = 401;
-        map.getPane('pane_schio_cerchio_1').style['mix-blend-mode'] = 'normal';
-        var layer_schio_cerchio_1 = new L.geoJson(json_schio_cerchio_1, {
+        map.createPane('pane_schio_cerchio_2');
+        map.getPane('pane_schio_cerchio_2').style.zIndex = 402;
+        map.getPane('pane_schio_cerchio_2').style['mix-blend-mode'] = 'normal';
+        var layer_schio_cerchio_2 = new L.geoJson(json_schio_cerchio_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_schio_cerchio_1',
-            layerName: 'layer_schio_cerchio_1',
-            pane: 'pane_schio_cerchio_1',
-            onEachFeature: pop_schio_cerchio_1,
-            style: style_schio_cerchio_1_0,
+            dataVar: 'json_schio_cerchio_2',
+            layerName: 'layer_schio_cerchio_2',
+            pane: 'pane_schio_cerchio_2',
+            onEachFeature: pop_schio_cerchio_2,
+            style: style_schio_cerchio_2_0,
         });
-        bounds_group.addLayer(layer_schio_cerchio_1);
-        map.addLayer(layer_schio_cerchio_1);
-        function pop_quartieri_simplified_centro_2(feature, layer) {
+        bounds_group.addLayer(layer_schio_cerchio_2);
+        map.addLayer(layer_schio_cerchio_2);
+        function pop_quartieri_simplified_centro_3(feature, layer) {
             var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -145,9 +151,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_centro_2_0() {
+        function style_quartieri_simplified_centro_3_0() {
             return {
-                pane: 'pane_quartieri_simplified_centro_2',
+                pane: 'pane_quartieri_simplified_centro_3',
                 opacity: 1,
                 color: 'rgba(2,48,32,1.0)',
                 dashArray: '',
@@ -158,21 +164,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_centro_2');
-        map.getPane('pane_quartieri_simplified_centro_2').style.zIndex = 402;
-        map.getPane('pane_quartieri_simplified_centro_2').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_centro_2 = new L.geoJson(json_quartieri_simplified_centro_2, {
+        map.createPane('pane_quartieri_simplified_centro_3');
+        map.getPane('pane_quartieri_simplified_centro_3').style.zIndex = 403;
+        map.getPane('pane_quartieri_simplified_centro_3').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_centro_3 = new L.geoJson(json_quartieri_simplified_centro_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_centro_2',
-            layerName: 'layer_quartieri_simplified_centro_2',
-            pane: 'pane_quartieri_simplified_centro_2',
-            onEachFeature: pop_quartieri_simplified_centro_2,
-            style: style_quartieri_simplified_centro_2_0,
+            dataVar: 'json_quartieri_simplified_centro_3',
+            layerName: 'layer_quartieri_simplified_centro_3',
+            pane: 'pane_quartieri_simplified_centro_3',
+            onEachFeature: pop_quartieri_simplified_centro_3,
+            style: style_quartieri_simplified_centro_3_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_centro_2);
-        map.addLayer(layer_quartieri_simplified_centro_2);
-        function pop_quartieri_simplified_scroce_3(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_centro_3);
+        map.addLayer(layer_quartieri_simplified_centro_3);
+        function pop_quartieri_simplified_scroce_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -185,9 +191,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_scroce_3_0() {
+        function style_quartieri_simplified_scroce_4_0() {
             return {
-                pane: 'pane_quartieri_simplified_scroce_3',
+                pane: 'pane_quartieri_simplified_scroce_4',
                 opacity: 1,
                 color: 'rgba(34,139,34,1.0)',
                 dashArray: '',
@@ -198,21 +204,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_scroce_3');
-        map.getPane('pane_quartieri_simplified_scroce_3').style.zIndex = 403;
-        map.getPane('pane_quartieri_simplified_scroce_3').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_scroce_3 = new L.geoJson(json_quartieri_simplified_scroce_3, {
+        map.createPane('pane_quartieri_simplified_scroce_4');
+        map.getPane('pane_quartieri_simplified_scroce_4').style.zIndex = 404;
+        map.getPane('pane_quartieri_simplified_scroce_4').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_scroce_4 = new L.geoJson(json_quartieri_simplified_scroce_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_scroce_3',
-            layerName: 'layer_quartieri_simplified_scroce_3',
-            pane: 'pane_quartieri_simplified_scroce_3',
-            onEachFeature: pop_quartieri_simplified_scroce_3,
-            style: style_quartieri_simplified_scroce_3_0,
+            dataVar: 'json_quartieri_simplified_scroce_4',
+            layerName: 'layer_quartieri_simplified_scroce_4',
+            pane: 'pane_quartieri_simplified_scroce_4',
+            onEachFeature: pop_quartieri_simplified_scroce_4,
+            style: style_quartieri_simplified_scroce_4_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_scroce_3);
-        map.addLayer(layer_quartieri_simplified_scroce_3);
-        function pop_quartieri_simplified_giavenale_4(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_scroce_4);
+        map.addLayer(layer_quartieri_simplified_scroce_4);
+        function pop_quartieri_simplified_giavenale_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -225,9 +231,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_giavenale_4_0() {
+        function style_quartieri_simplified_giavenale_5_0() {
             return {
-                pane: 'pane_quartieri_simplified_giavenale_4',
+                pane: 'pane_quartieri_simplified_giavenale_5',
                 opacity: 1,
                 color: 'rgba(53,121,177,1.0)',
                 dashArray: '',
@@ -238,21 +244,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_giavenale_4');
-        map.getPane('pane_quartieri_simplified_giavenale_4').style.zIndex = 404;
-        map.getPane('pane_quartieri_simplified_giavenale_4').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_giavenale_4 = new L.geoJson(json_quartieri_simplified_giavenale_4, {
+        map.createPane('pane_quartieri_simplified_giavenale_5');
+        map.getPane('pane_quartieri_simplified_giavenale_5').style.zIndex = 405;
+        map.getPane('pane_quartieri_simplified_giavenale_5').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_giavenale_5 = new L.geoJson(json_quartieri_simplified_giavenale_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_giavenale_4',
-            layerName: 'layer_quartieri_simplified_giavenale_4',
-            pane: 'pane_quartieri_simplified_giavenale_4',
-            onEachFeature: pop_quartieri_simplified_giavenale_4,
-            style: style_quartieri_simplified_giavenale_4_0,
+            dataVar: 'json_quartieri_simplified_giavenale_5',
+            layerName: 'layer_quartieri_simplified_giavenale_5',
+            pane: 'pane_quartieri_simplified_giavenale_5',
+            onEachFeature: pop_quartieri_simplified_giavenale_5,
+            style: style_quartieri_simplified_giavenale_5_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_giavenale_4);
-        map.addLayer(layer_quartieri_simplified_giavenale_4);
-        function pop_quartieri_simplified_stpoleo_5(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_giavenale_5);
+        map.addLayer(layer_quartieri_simplified_giavenale_5);
+        function pop_quartieri_simplified_stpoleo_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -265,9 +271,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_stpoleo_5_0() {
+        function style_quartieri_simplified_stpoleo_6_0() {
             return {
-                pane: 'pane_quartieri_simplified_stpoleo_5',
+                pane: 'pane_quartieri_simplified_stpoleo_6',
                 opacity: 1,
                 color: 'rgba(34,139,34,1.0)',
                 dashArray: '',
@@ -278,21 +284,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_stpoleo_5');
-        map.getPane('pane_quartieri_simplified_stpoleo_5').style.zIndex = 405;
-        map.getPane('pane_quartieri_simplified_stpoleo_5').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_stpoleo_5 = new L.geoJson(json_quartieri_simplified_stpoleo_5, {
+        map.createPane('pane_quartieri_simplified_stpoleo_6');
+        map.getPane('pane_quartieri_simplified_stpoleo_6').style.zIndex = 406;
+        map.getPane('pane_quartieri_simplified_stpoleo_6').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_stpoleo_6 = new L.geoJson(json_quartieri_simplified_stpoleo_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_stpoleo_5',
-            layerName: 'layer_quartieri_simplified_stpoleo_5',
-            pane: 'pane_quartieri_simplified_stpoleo_5',
-            onEachFeature: pop_quartieri_simplified_stpoleo_5,
-            style: style_quartieri_simplified_stpoleo_5_0,
+            dataVar: 'json_quartieri_simplified_stpoleo_6',
+            layerName: 'layer_quartieri_simplified_stpoleo_6',
+            pane: 'pane_quartieri_simplified_stpoleo_6',
+            onEachFeature: pop_quartieri_simplified_stpoleo_6,
+            style: style_quartieri_simplified_stpoleo_6_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_stpoleo_5);
-        map.addLayer(layer_quartieri_simplified_stpoleo_5);
-        function pop_quartieri_simplified_magre_6(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_stpoleo_6);
+        map.addLayer(layer_quartieri_simplified_stpoleo_6);
+        function pop_quartieri_simplified_magre_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -305,9 +311,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_magre_6_0() {
+        function style_quartieri_simplified_magre_7_0() {
             return {
-                pane: 'pane_quartieri_simplified_magre_6',
+                pane: 'pane_quartieri_simplified_magre_7',
                 opacity: 1,
                 color: 'rgba(228,26,28,1.0)',
                 dashArray: '',
@@ -318,21 +324,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_magre_6');
-        map.getPane('pane_quartieri_simplified_magre_6').style.zIndex = 406;
-        map.getPane('pane_quartieri_simplified_magre_6').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_magre_6 = new L.geoJson(json_quartieri_simplified_magre_6, {
+        map.createPane('pane_quartieri_simplified_magre_7');
+        map.getPane('pane_quartieri_simplified_magre_7').style.zIndex = 407;
+        map.getPane('pane_quartieri_simplified_magre_7').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_magre_7 = new L.geoJson(json_quartieri_simplified_magre_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_magre_6',
-            layerName: 'layer_quartieri_simplified_magre_6',
-            pane: 'pane_quartieri_simplified_magre_6',
-            onEachFeature: pop_quartieri_simplified_magre_6,
-            style: style_quartieri_simplified_magre_6_0,
+            dataVar: 'json_quartieri_simplified_magre_7',
+            layerName: 'layer_quartieri_simplified_magre_7',
+            pane: 'pane_quartieri_simplified_magre_7',
+            onEachFeature: pop_quartieri_simplified_magre_7,
+            style: style_quartieri_simplified_magre_7_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_magre_6);
-        map.addLayer(layer_quartieri_simplified_magre_6);
-        function pop_quartieri_simplified_sstrinita_7(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_magre_7);
+        map.addLayer(layer_quartieri_simplified_magre_7);
+        function pop_quartieri_simplified_sstrinita_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -345,9 +351,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_sstrinita_7_0() {
+        function style_quartieri_simplified_sstrinita_8_0() {
             return {
-                pane: 'pane_quartieri_simplified_sstrinita_7',
+                pane: 'pane_quartieri_simplified_sstrinita_8',
                 opacity: 1,
                 color: 'rgba(228,26,28,1.0)',
                 dashArray: '',
@@ -358,21 +364,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_sstrinita_7');
-        map.getPane('pane_quartieri_simplified_sstrinita_7').style.zIndex = 407;
-        map.getPane('pane_quartieri_simplified_sstrinita_7').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_sstrinita_7 = new L.geoJson(json_quartieri_simplified_sstrinita_7, {
+        map.createPane('pane_quartieri_simplified_sstrinita_8');
+        map.getPane('pane_quartieri_simplified_sstrinita_8').style.zIndex = 408;
+        map.getPane('pane_quartieri_simplified_sstrinita_8').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_sstrinita_8 = new L.geoJson(json_quartieri_simplified_sstrinita_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_sstrinita_7',
-            layerName: 'layer_quartieri_simplified_sstrinita_7',
-            pane: 'pane_quartieri_simplified_sstrinita_7',
-            onEachFeature: pop_quartieri_simplified_sstrinita_7,
-            style: style_quartieri_simplified_sstrinita_7_0,
+            dataVar: 'json_quartieri_simplified_sstrinita_8',
+            layerName: 'layer_quartieri_simplified_sstrinita_8',
+            pane: 'pane_quartieri_simplified_sstrinita_8',
+            onEachFeature: pop_quartieri_simplified_sstrinita_8,
+            style: style_quartieri_simplified_sstrinita_8_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_sstrinita_7);
-        map.addLayer(layer_quartieri_simplified_sstrinita_7);
-        function pop_quartieri_simplified_tretto_8(feature, layer) {
+        bounds_group.addLayer(layer_quartieri_simplified_sstrinita_8);
+        map.addLayer(layer_quartieri_simplified_sstrinita_8);
+        function pop_quartieri_simplified_tretto_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['proposte'] !== null ? autolinker.link(feature.properties['proposte'].toLocaleString()) : '') + '</td>\
@@ -385,9 +391,9 @@
             popup.setContent(updatedContent);
         }
 
-        function style_quartieri_simplified_tretto_8_0() {
+        function style_quartieri_simplified_tretto_9_0() {
             return {
-                pane: 'pane_quartieri_simplified_tretto_8',
+                pane: 'pane_quartieri_simplified_tretto_9',
                 opacity: 1,
                 color: 'rgba(53,121,177,1.0)',
                 dashArray: '',
@@ -398,30 +404,35 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_quartieri_simplified_tretto_8');
-        map.getPane('pane_quartieri_simplified_tretto_8').style.zIndex = 408;
-        map.getPane('pane_quartieri_simplified_tretto_8').style['mix-blend-mode'] = 'normal';
-        var layer_quartieri_simplified_tretto_8 = new L.geoJson(json_quartieri_simplified_tretto_8, {
+        map.createPane('pane_quartieri_simplified_tretto_9');
+        map.getPane('pane_quartieri_simplified_tretto_9').style.zIndex = 409;
+        map.getPane('pane_quartieri_simplified_tretto_9').style['mix-blend-mode'] = 'normal';
+        var layer_quartieri_simplified_tretto_9 = new L.geoJson(json_quartieri_simplified_tretto_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_quartieri_simplified_tretto_8',
-            layerName: 'layer_quartieri_simplified_tretto_8',
-            pane: 'pane_quartieri_simplified_tretto_8',
-            onEachFeature: pop_quartieri_simplified_tretto_8,
-            style: style_quartieri_simplified_tretto_8_0,
+            dataVar: 'json_quartieri_simplified_tretto_9',
+            layerName: 'layer_quartieri_simplified_tretto_9',
+            pane: 'pane_quartieri_simplified_tretto_9',
+            onEachFeature: pop_quartieri_simplified_tretto_9,
+            style: style_quartieri_simplified_tretto_9_0,
         });
-        bounds_group.addLayer(layer_quartieri_simplified_tretto_8);
-        map.addLayer(layer_quartieri_simplified_tretto_8);
+        bounds_group.addLayer(layer_quartieri_simplified_tretto_9);
+        map.addLayer(layer_quartieri_simplified_tretto_9);
         setBounds();
-        resetLabels([layer_quartieri_simplified_giavenale_4,layer_quartieri_simplified_tretto_8]);
+        L.ImageOverlay.include({
+            getBounds: function () {
+                return this._bounds;
+            }
+        });
+        resetLabels([layer_quartieri_simplified_giavenale_5,layer_quartieri_simplified_tretto_9]);
         map.on("zoomend", function(){
-            resetLabels([layer_quartieri_simplified_giavenale_4,layer_quartieri_simplified_tretto_8]);
+            resetLabels([layer_quartieri_simplified_giavenale_5,layer_quartieri_simplified_tretto_9]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_quartieri_simplified_giavenale_4,layer_quartieri_simplified_tretto_8]);
+            resetLabels([layer_quartieri_simplified_giavenale_5,layer_quartieri_simplified_tretto_9]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_quartieri_simplified_giavenale_4,layer_quartieri_simplified_tretto_8]);
+            resetLabels([layer_quartieri_simplified_giavenale_5,layer_quartieri_simplified_tretto_9]);
         });
         </script>
     </body>
